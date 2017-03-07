@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.基本信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.档案管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.员工档案ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.员工档案ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.区域档案ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.系统管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -50,26 +51,11 @@
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 396);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(632, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(32, 17);
-            this.toolStripStatusLabel.Text = "状态";
-            // 
             // 基本信息ToolStripMenuItem
             // 
             this.基本信息ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.档案管理ToolStripMenuItem});
+            this.档案管理ToolStripMenuItem,
+            this.系统管理ToolStripMenuItem});
             this.基本信息ToolStripMenuItem.Name = "基本信息ToolStripMenuItem";
             this.基本信息ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.基本信息ToolStripMenuItem.Text = "基本信息";
@@ -102,6 +88,28 @@
             this.区域档案ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.区域档案ToolStripMenuItem.Text = "区域档案";
             // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 396);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(632, 22);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(32, 17);
+            this.toolStripStatusLabel.Text = "状态";
+            // 
+            // 系统管理ToolStripMenuItem
+            // 
+            this.系统管理ToolStripMenuItem.Name = "系统管理ToolStripMenuItem";
+            this.系统管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.系统管理ToolStripMenuItem.Text = "系统管理";
+            // 
             // M_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -115,6 +123,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "贵州精算软件OA系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.M_Form_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.M_Form_FormClosed);
             this.Load += new System.EventHandler(this.M_Form_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -122,8 +132,6 @@
             this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.M_Form_FormClosed);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.M_Form_FormClosing);
 
         }
         #endregion
@@ -137,6 +145,7 @@
         private System.Windows.Forms.ToolStripMenuItem 员工档案ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 员工档案ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 区域档案ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 系统管理ToolStripMenuItem;
     }
 }
 
