@@ -31,7 +31,7 @@ namespace OA
         {
             string user = this.UserBox.Text.Trim();
             string pass = this.PassBox.Text.Trim();
-            if ((user == "root") || (pass == "123456"))
+            if ((user == "root") && (pass == "123456"))
             {
                 M_Form F2 = new M_Form();
                 this.Hide();
